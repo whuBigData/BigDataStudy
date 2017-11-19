@@ -17,6 +17,7 @@
 
     ```
 
+
 2.  Java 安装
 
     ```sh
@@ -29,3 +30,29 @@
     ```
 
     Java 安装默认地址:     **/usr/lib/jvm/java-8-oracle**
+
+
+3. SSH 登录权限设置
+
+    ```sh
+
+    $ sudo -i -u hadoop                    # 切换到 hadoop 用户
+    $ ssh-kegen -t rsa -P ''               # 免密码生成公钥、私钥对  -p (--password)
+    $ cd ~/.ssh                            # 切换到公钥、私钥对目录
+    $ cat id_rsa.pub >> authorized_keys    # 将本机 hadoop 用户的公钥保存到本机 hadoop 用户， 使得 ssh 连接本机能够成功
+    $ chmod 600 authorized_keys            # 
+    $ chmod 700 ~/.ssh                     #
+    $ vim /etc/ssh/ssh_config              # 打开 /etc/ssh/ssh_config 文件
+
+    ```
+
+    添加:
+
+    ```sh
+
+    RSAAuthentication yes       # 允许使用 ssh 登录
+    PubkeyAuthentication yes    # 允许使用公钥
+    PermitRootLogin yes         # 允许 root 登录
+    PasswordAuthentication no   # 不需要密码验证登录
+
+    ```
