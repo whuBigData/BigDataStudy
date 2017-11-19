@@ -56,3 +56,10 @@
     PasswordAuthentication no   # 不需要密码验证登录
 
     ```
+
+    ```sh
+    
+    $ service sshd restart      # 重启 ssh 服务
+    $ ssh localhost             # 使用 ssh 协议连接本机， 若不需要输入密码，则免密码连接成功
+    
+    ```
