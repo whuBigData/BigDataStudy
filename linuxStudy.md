@@ -69,9 +69,10 @@
 
     ```
     -p (--password), '' 代表 不需要密码
+    生成 密钥对 默认路径 ～/.ssh 
 
-    [rsa 算法详解](http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html)
-
+    [rsa 算法原理1](http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html)
+    [rsa 算法原理2](http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html)
 
 
 
