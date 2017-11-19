@@ -1,10 +1,10 @@
 
 ### linux(ubuntu) 用户设置
     
-    * 创建用户
-        $: 普通管理员
-        #: 系统管理员
-        
+* 创建用户
+    $: 普通管理员
+    #: 系统管理员
+    
         ```sh
     
         $ useradd username    # 创建用户，不会创建用户主目录、用户同名组
@@ -17,20 +17,20 @@
         ```
 
 
-    * 赋予用户 root 权限
+* 赋予用户 root 权限
     
-        ```sh
+    ```sh
         
-        $ vim /etc/sudoers
+    $ vim /etc/sudoers
         
-        ```
-        在 /etc/sudoers 文件中加入
+    ```
+    在 /etc/sudoers 文件中加入
         
-        ```sh
+    ```sh
         
-        username ALL=(ALL) ALL  # 将 root 权限赋予用户 username
+    username ALL=(ALL) ALL  # 将 root 权限赋予用户 username
         
-        ```
+    ```
 
 
 ### cat 命令：
