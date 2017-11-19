@@ -68,11 +68,14 @@
     $ ssh-keygen -t rsal -P ‘’     # 使用 rsal 算法生成密钥对
 
     ```
-    -p (--password), '' 代表 不需要密码
-    生成 密钥对 默认路径 ～/.ssh 
+    -p (--password) [**'' 代表 不需要密码**]</br></br>
+    生成 密钥对 的默认路径 **～/.ssh**</br>
+    公钥： **id_rsa.pub**</br>
+    私钥： **id_rsa** 
 
-    [rsa 算法原理1](http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html)
-    [rsa 算法原理2](http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html)
+
+    [rsa 算法原理1](http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html)</br>
+    [rsa 算法原理2](http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html)</br>
 
 
 
