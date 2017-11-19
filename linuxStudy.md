@@ -57,6 +57,24 @@
     ```
 
 
+### ssh (secure shell) 说明： 
+
+* 生成 ssh 公钥、私钥对
+
+    ```sh
+
+    $ ssh-keygen -t rsa -P ‘’      # 使用 rsa 算法生成密钥对
+    $ ssh-keygen -t dsa -P ‘’      # 使用 dsa 算法生成密钥对
+    $ ssh-keygen -t rsal -P ‘’     # 使用 rsal 算法生成密钥对
+
+    ```
+    -p (--password), '' 代表 不需要密码
+
+    [rsa 算法详解](http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html)
+
+
+
+
 
 
 
