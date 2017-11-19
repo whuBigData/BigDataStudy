@@ -46,7 +46,7 @@
 
     ```
 
-    添加:
+    在 /etc/ssh/ssh_config 文件中 添加:
 
     ```sh
 
