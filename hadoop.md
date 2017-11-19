@@ -21,9 +21,11 @@
 
     ```sh
 
-    sudo add-apt-repository ppa:webupd8team/java
-    sudo apt-get update
-    sudo apt-get install oracle-java8-installer
-    sudo apt-get install oracle-java8-set-default
+    sudo add-apt-repository ppa:webupd8team/java    # 获取最新的个人软件包档案源，将其添加到 apt 库中， 并自动导入公钥
+    sudo apt-get update                             # 更新
+    sudo apt-get install oracle-java8-installer     # 安装 oracle-java8-installer
+    sudo apt-get install oracle-java8-set-default   # 如果在前一条命令安装时自动安装了，则不需要
 
     ```
+
+    Java 安装默认地址  **/usr/lib/jvm/java-8-oracle**
