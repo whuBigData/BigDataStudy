@@ -36,24 +36,25 @@
 
 ### cat 命令：
 
-```sh
+* 
+    ```sh
 
-$ cat filename                        # 一次显示整个文件
-$ cat > filename                      # 从键盘创建一个文件
-$ cat [options] file1 file2 > file    # 将几个文件合为一个文件
-    
-```
+    $ cat filename                        # 一次显示整个文件
+    $ cat > filename                      # 从键盘创建一个文件
+    $ cat [options] file1 file2 > file    # 将几个文件合为一个文件
+        
+    ```
 
-options 说明：
+* options 说明：
 
-```c
+    ```c
 
--n(--number)             // 由 1 开始对所有行数进行编号
--b(--number-nonblank)    // 与 **-n** 类似， 不过对于所有空白行不编号
--s(--squeeze-blank)      // 将遇到连续两行以上的空白行合为 1 行编号
--v(--show-nonprinting)
+    -n(--number)             // 由 1 开始对所有行数进行编号
+    -b(--number-nonblank)    // 与 **-n** 类似， 不过对于所有空白行不编号
+    -s(--squeeze-blank)      // 将遇到连续两行以上的空白行合为 1 行编号
+    -v(--show-nonprinting)
 
-```
+    ```
 
 
 
