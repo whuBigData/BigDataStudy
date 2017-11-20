@@ -4,20 +4,21 @@
 * 用户命令：</br></br>
     $: 普通管理员</br>
     #: 系统管理员</br>
+    
     ```sh
-    :'
+    :`
     useradd命令（添加用户）
     -g(--group): 指定用户所在的用户组
     -u(--uid):   指定用户 id
     -e(--expire):指定用户期满时间
-    ‘
+    `
     $ useradd [-g group| -u uid| -e time] username    # 创建用户，不会创建用户主目录、用户同名组
     $ adduser [-g group| -u uid| -e time] username    # 创建用户，会创建用户主目录、 同名用户组
 
 
-    :'
+    :`
     usermod 命令（修改用户）
-    '
+    `
     $ usermod -l optUser srcUser         #
     $ usermod -g group user              #
     $ usermod -d dir user                #
