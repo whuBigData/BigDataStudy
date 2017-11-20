@@ -1,14 +1,28 @@
 
 ### linux(ubuntu) 用户设置
     
-* 创建用户
-    $: 普通管理员
-    #: 系统管理员
+* 用户命令：</br></br>
+    $: 普通管理员</br>
+    #: 系统管理员</br>
     
     ```sh
-    
-    $ useradd [options] username    # 创建用户，不会创建用户主目录、用户同名组
-    $ adduser [options] username    # 创建用户，会创建用户主目录、 同名用户组    ----- ubuntu 最好用起创建用户
+    :'
+    useradd命令（添加用户）
+    -g(--group): 指定用户所在的用户组
+    -u(--uid):   指定用户 id
+    -e(--expire):指定用户期满时间
+    ‘
+    $ useradd [-g group| -u uid| -e time] username    # 创建用户，不会创建用户主目录、用户同名组
+    $ adduser [-g group| -u uid| -e time] username    # 创建用户，会创建用户主目录、 同名用户组
+
+
+    :'
+    usermod 命令（修改用户）
+    '
+    $ usermod -l optUser srcUser         #
+    $ usermod -g group user              #
+    $ usermod -d dir user                #
+    $ userdel [-r] user
     $ passwd username     # 设置用户密码
         
     $ sudo -i -u username # 切换到用户 username 下
@@ -25,6 +39,7 @@
     -e     # 指定用户有效时间
 
     ```
+
 
 
 
