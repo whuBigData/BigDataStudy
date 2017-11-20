@@ -7,14 +7,25 @@
     
     ```sh
     
-    $ useradd username    # 创建用户，不会创建用户主目录、用户同名组
-    $ adduser username    # 创建用户，会创建用户主目录、 同名用户组    ----- ubuntu 最好用起创建用户
+    $ useradd [options] username    # 创建用户，不会创建用户主目录、用户同名组
+    $ adduser [options] username    # 创建用户，会创建用户主目录、 同名用户组    ----- ubuntu 最好用起创建用户
     $ passwd username     # 设置用户密码
         
     $ sudo -i -u username # 切换到用户 username 下
     $ exit                # 退回到默认用户 
 
     ```
+
+    options 说明：
+
+    ```sh
+
+    -g     # 指定用户所在的用户组
+    -u     # 指定用户的 uid
+    -e     # 指定用户有效时间
+
+    ```
+
 
 
 * 赋予用户 root 权限
@@ -34,6 +45,7 @@
 
 
 
+###
 ### cat 命令：
 
 * 命令说明
