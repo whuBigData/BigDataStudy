@@ -8,9 +8,9 @@
     ```sh
 
     # useradd命令（添加用户）
-    # -g(--group): 指定用户所在的用户组
-    # -u(--uid):   指定用户 id
-    # -e(--expire):指定用户期满时间
+    # -g(--group)       指定用户所在的用户组
+    # -u(--uid)         指定用户 id
+    # -e(--expire)      指定用户期满时间
 
     $ useradd [-g group| -u uid| -e expire] username    # 创建用户，不会创建用户主目录、用户同名组
     $ adduser [-g group| -u uid| -e expire] username    # 创建用户，会创建用户主目录、 同名用户组
@@ -22,6 +22,9 @@
     $ usermod -l optUser srcUser         #
     $ usermod -g group user              #
     $ usermod -d dir user                #
+
+
+
     $ userdel [-r] user
     $ passwd username     # 设置用户密码
         
@@ -54,23 +57,20 @@
 ### cat 命令：
 
 * 命令说明
+
     ```sh
 
-    $ cat filename                        # 一次显示整个文件
+
+    # -n(--number)              由 1 开始对所有行数进行编号
+    # -b(--number-nonblank)     与 **-n** 类似， 不过对于所有空白行不编号
+    # -s(--squeeze-blank)       将遇到连续两行以上的空白行合为 1 行编号
+    # -v(--show-nonprinting)
+
+
+    $ cat [-n| -b| -s| -v] filename                        # 一次显示整个文件
     $ cat > filename                      # 从键盘创建一个文件
     $ cat [options] file1 file2 > file    # 将几个文件合为一个文件
         
-    ```
-
-* options 说明：
-
-    ```c
-
-    -n(--number)             // 由 1 开始对所有行数进行编号
-    -b(--number-nonblank)    // 与 **-n** 类似， 不过对于所有空白行不编号
-    -s(--squeeze-blank)      // 将遇到连续两行以上的空白行合为 1 行编号
-    -v(--show-nonprinting)
-
     ```
 
 
