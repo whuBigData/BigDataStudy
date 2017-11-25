@@ -1,4 +1,4 @@
-# hadoop 的安装与使用 (ubuntu)
+##### hadoop 的安装与使用 (ubuntu)
 
 
 1. 创建 hadoop 用户
