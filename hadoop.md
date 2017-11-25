@@ -8,8 +8,8 @@
 
     ```sh
 
-    $ adduser hadoop          # 创建 hadoop 用户
-    $ vim /etc/sudoers        # 打开用户权限文件
+    xj@xj$ adduser hadoop          # 创建 hadoop 用户
+    xj@xj$ vim /etc/sudoers        # 打开用户权限文件
 
     ```
     在 /etc/sudoers 文件中加入
