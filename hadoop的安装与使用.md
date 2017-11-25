@@ -230,6 +230,8 @@
     $ ./bin/start-all.sh
 
     ```
-    配置好了 hadoop 伪分布文件系统了[http://localhost:50075](http://localhost:50075)
+    配置好了 hadoop 伪分布文件系统了[http://localhost:50070](http://localhost:50070)
 
     让我们再来在配置好的 hadoop 文件系统中重新完成 wordcount 例子（**这里是 hadoop 文件系统、 不是本地 linux 文件系统**）
+
+
