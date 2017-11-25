@@ -58,16 +58,16 @@
     ```
 
     ```sh
-    
+
     $ service sshd restart      # 重启 ssh 服务
     $ ssh localhost             # 使用 ssh 协议连接本机， 若不需要输入密码，则免密码连接成功
-    
+
     ```
 
     若显示则 ssh 权限配置成功：
 
     ```sh
-    
+
     Last login: Mon Nov 20 09:59:16 2017 from 127.0.0.1    # 类似 Last login
 
     ```
@@ -83,8 +83,37 @@
     $ sudo mkdir /usr/local/hadoop                                  # 创建 hadoop 文件
     $ sudo tar -zxvf hadoop-1.2.1-bin.tar.gz -C /usr/local/hadoop   # 解压 hadoop 文件到 /usr/local/hadoop
     $ sudo chown hadoop:hadoop /usr/local/hadoop                    # 设置 /usr/local/hadoop 的拥有这为 hadoop 组 的 hadoop 用户
-    $ cd /usr/local/hadoop/hadoop-1.2.1                                          
+    $ cd /usr/local/hadoop/hadoop-1.2.1
 
     ```
 
     更改 conf 目录下面的 hadoop-env.sh（hadoop 运行环境文件） 配置文件 </br>
+
+
+    ```sh
+
+    $ vim ./conf/hadoop-env.sh
+    
+    ```
+
+    取消下面的注释 并设置路径为 java 安装路径(如果你照着前面的步骤到这里来了，那么最后应该设置为下面这样)
+
+    ```sh
+
+    export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+    ```
+
+    配置完成后可以在 hadoop 的安装目录 运行 hadoop 版本命令 查看 hadoop 版本信息； 即：
+
+    ```sh
+
+    $ ./bin/hadoop version
+    
+    Hadoop 1.2.1
+    .......
+    This command was run using /usr/local/hadoop/hadoop-1.2.1/hadoop-core-1.2.1.jar
+
+    ```
+
+    若显示类似，则单机安装成功!!!
