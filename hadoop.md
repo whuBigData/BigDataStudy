@@ -171,6 +171,49 @@
     | hadoop-metrics2.properties | 控制 metrics 在 Hadoop 上 如何发布的属性           |
 
     
-    对于伪分布式安装 我们需要修改 core-site.xml  hdfs-site.xml  mapred-site.xml 三个文件</br>
-    修改后文件如下:</br>
-    core
+    对于伪分布式安装 我们需要修改 core-site.xml  hdfs-site.xml  mapred-site.xml 三个文件
+    
+    ```sh
+    
+    <property></property>: 配置的元素
+    <name></name>: 配置项的名字
+    <value></value>: 配置项的值
+
+    ```
+
+    修改后文件如下:
+
+    core.site.xml(指定 hdfs 的地址和端口号)
+    
+    ```sh
+
+    <cofiguration>
+        <property>
+            <name>fs.default.name</name>
+            <value>hdfs://localhost:9000</value>
+        </property>
+    </configuration>
+
+    ```
+
+    hdfs-site.xml(设置 hadoop 中同一数据的备份数量)
+
+    ```sh
+
+    <configuration>
+        <property>
+            <name>dfs.replication</name>
+            <value>3</value>
+        </property>
+    </configuration>
+
+    ```
+
+    mapred-site.xml(设置 JobTracker 的地址和端口信息)
+
+    <configuration>
+        <property>
+            <name>mapred.job.tracker</name>
+            <value>localhost:9001</name>
+        </property>
+    </configuration>
