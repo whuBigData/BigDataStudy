@@ -17,18 +17,23 @@
 
 
     
-    #usermod 命令（修改用户）
+    # usermod 命令（修改用户）
     
     $ usermod -l optUser srcUser         #
     $ usermod -g group user              #
     $ usermod -d dir user                #
 
 
-
+    # userdel 命令（删除用户）
     $ userdel [-r] user
+
+    # 修改用户密码
     $ passwd username     # 设置用户密码
         
+    # 切换用户
     $ sudo -i -u username # 切换到用户 username 下
+    
+    # 退出当前用户
     $ exit                # 退回到默认用户 
 
     ```
@@ -51,9 +56,11 @@
         
     ```
 
+* chown 命令 
+
+### chmod 命令
 
 
-###
 ### cat 命令：
 
 * 命令说明

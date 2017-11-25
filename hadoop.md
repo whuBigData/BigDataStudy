@@ -74,4 +74,17 @@
 
 4. 安装单机 Hadoop
 
-   到 [hadoop网址(1.2.1版本)](http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1-bin.tar.gz) 下载 hadoop 1.2.1 版本代码
+   到 [hadoop网址(1.2.1版本)](http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1-bin.tar.gz) 下载 hadoop 1.2.1 版本代码</br>
+
+   到 下载目录 解压下载包到 /usr/local/hadoop 目录中</br>
+
+    ```sh
+
+    $ sudo mkdir /usr/local/hadoop                                  # 创建 hadoop 文件
+    $ sudo tar -zxvf hadoop-1.2.1-bin.tar.gz -C /usr/local/hadoop   # 解压 hadoop 文件到 /usr/local/hadoop
+    $ sudo chown hadoop:hadoop /usr/local/hadoop                    # 设置 /usr/local/hadoop 的拥有这为 hadoop 组 的 hadoop 用户
+    $ cd /usr/local/hadoop/hadoop-1.2.1                                          
+
+    ```
+
+    更改 conf 目录下面的 hadoop-env.sh（hadoop 运行环境文件） 配置文件 </br>
