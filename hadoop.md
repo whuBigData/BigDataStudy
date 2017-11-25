@@ -1,15 +1,12 @@
 # hadoop 的安装与使用 (ubuntu)
 
-   本人原本 ubuntu 用户(xj)： **xj@xj$**</br>
-   切换到 hadoop 用户(hadoop)： **hadoop@xj$**</br>
-
 
 1. 创建 hadoop 用户
 
     ```sh
 
-    xj@xj$ adduser hadoop          # 创建 hadoop 用户
-    xj@xj$ vim /etc/sudoers        # 打开用户权限文件
+    $ adduser hadoop          # 创建 hadoop 用户
+    $ vim /etc/sudoers        # 打开用户权限文件
 
     ```
     在 /etc/sudoers 文件中加入
@@ -40,11 +37,11 @@
     ```sh
 
     $ sudo -i -u hadoop                    # 切换到 hadoop 用户
-    $ ssh-kegen -t rsa -P ''               # 免密码生成公钥、私钥对  -p (--password)
+    $ ssh-keygen -t rsa -P ''               # 免密码生成公钥、私钥对  -p (--password)
     $ cd ~/.ssh                            # 切换到公钥、私钥对目录
     $ cat id_rsa.pub >> authorized_keys    # 将本机 hadoop 用户的公钥保存到本机 hadoop 用户， 使得 ssh 连接本机能够成功
-    $ chmod 600 authorized_keys            # 
-    $ chmod 700 ~/.ssh                     #
+    $ chmod 600 authorized_keys            # 设置 authorized_keys 文件权限为 可读可写
+    $ chmod 700 ~/.ssh                     # 设置 ~/.ssh 文件权限为 可读可写可执行
     $ vim /etc/ssh/ssh_config              # 打开 /etc/ssh/ssh_config 文件
 
     ```
@@ -65,4 +62,12 @@
     $ service sshd restart      # 重启 ssh 服务
     $ ssh localhost             # 使用 ssh 协议连接本机， 若不需要输入密码，则免密码连接成功
     
+    ```
+
+    若显示则 ssh 权限配置成功：
+
+    ```sh
+    
+    Last login: Mon Nov 20 09:59:16 2017 from 127.0.0.1    # 类似 Last login
+
     ```
