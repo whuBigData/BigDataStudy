@@ -93,7 +93,7 @@
     ```sh
 
     $ vim ./conf/hadoop-env.sh
-    
+
     ```
 
     取消下面的注释 并设置路径为 java 安装路径(如果你照着前面的步骤到这里来了，那么最后应该设置为下面这样)
@@ -109,7 +109,7 @@
     ```sh
 
     $ ./bin/hadoop version
-    
+
     Hadoop 1.2.1
     .......
     This command was run using /usr/local/hadoop/hadoop-1.2.1/hadoop-core-1.2.1.jar
@@ -128,23 +128,32 @@
     ```
 
     输入下列单词，并保存退出
-    
+
     ```sh
 
     hello
     word
     word
     test
-    
+
     ```
 
-    在 hadoop 安装目录下执行 
+    在 hadoop 安装目录下执行
 
     ```sh
 
     # jar 引入 hadoop 程序的依赖包
     # wordcount 为 hadoop 命令
     # input output 为命令的两个参数， input 文件夹为输入参数， output 文件夹为输出参数
-    $ ./bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output 
+    $ ./bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output
+    $ cat ./output/*
+    hello	1
+    test	1
+    word	2
 
     ```
+    显示如上， 恭喜安装成功!!!
+
+
+5. Hadoop 伪分布式安装
+
