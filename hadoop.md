@@ -74,4 +74,4 @@
 
 4. 安装单机 Hadoop
 
-   到 [hadoop网址(1.2.1版本)](http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-1.2.1) 下载 hadoop 1.2.1 版本代码
+   到 [hadoop网址(1.2.1版本)](http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1-bin.tar.gz) 下载 hadoop 1.2.1 版本代码
