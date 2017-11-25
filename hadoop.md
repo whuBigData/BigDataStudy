@@ -117,3 +117,34 @@
     ```
 
     若显示类似，则单机安装成功!!!
+
+    **hadoop wordcount(单词统计例子)**
+
+    ```sh
+
+    $ mkdir input   # 在 hadoop 的安装目录下`创建 wordcount 的 输入文件 input
+    $ vim ./input/test.c    # 创建 test.c 单词统计文件
+
+    ```
+
+    输入下列单词，并保存退出
+    
+    ```sh
+
+    hello
+    word
+    word
+    test
+    
+    ```
+
+    在 hadoop 安装目录下执行 
+
+    ```sh
+
+    # jar 引入 hadoop 程序的依赖包
+    # wordcount 为 hadoop 命令
+    # input output 为命令的两个参数， input 文件夹为输入参数， output 文件夹为输出参数
+    $ ./bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output 
+
+    ```
