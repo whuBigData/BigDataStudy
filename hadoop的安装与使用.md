@@ -173,7 +173,7 @@
 
     对于伪分布式安装 我们需要修改 core-site.xml  hdfs-site.xml  mapred-site.xml 三个文件
 
-    ```sh
+    ```xml
 
     <property></property>: 配置的元素
     <name></name>: 配置项的名字
@@ -185,7 +185,7 @@
 
     core.site.xml(指定 hdfs 的地址和端口号)
 
-    ```sh
+    ```xml
 
     <cofiguration>
         <property>
@@ -198,7 +198,7 @@
 
     hdfs-site.xml(设置 hadoop 中同一数据的备份数量)
 
-    ```sh
+    ```xml
 
     <configuration>
         <property>
@@ -211,7 +211,7 @@
 
     mapred-site.xml(设置 JobTracker 的地址和端口信息)
 
-    ```sh
+    ```xml
 
     <configuration>
         <property>
