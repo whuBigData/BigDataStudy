@@ -71,3 +71,7 @@
     Last login: Mon Nov 20 09:59:16 2017 from 127.0.0.1    # 类似 Last login
 
     ```
+
+4. 安装单机 Hadoop
+
+   到 [hadoop网址(1.2.1版本)](http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-1.2.1) 下载 hadoop 1.2.1 版本代码
