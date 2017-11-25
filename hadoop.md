@@ -1,5 +1,8 @@
-
 ### hadoop 的安装与使用 (ubuntu)
+
+注：本人原本 ubuntu 用户： **xj (shell 上显示 xj@xj)***
+   切换到 hadoop 用户后： **hadoop(shell 上显示 hadoop@xj)**
+
 
 1. 创建 hadoop 用户
 
