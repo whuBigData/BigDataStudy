@@ -171,7 +171,6 @@
     | hadoop-metrics2.properties | 控制 metrics 在 Hadoop 上 如何发布的属性           |
 
     
-    对于伪分布式安装 我们需要修改 core-site.xml  hdfs-site.xml  mapred-site.xml 三个文件
-    
+    对于伪分布式安装 我们需要修改 core-site.xml  hdfs-site.xml  mapred-site.xml 三个文件</br>
     修改后文件如下:</br>
     core
