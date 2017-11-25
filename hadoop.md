@@ -122,7 +122,7 @@
 
     ```sh
 
-    $ mkdir input   # 在 hadoop 的安装目录下`创建 wordcount 的 输入文件 input
+    $ mkdir input           # 在 hadoop 的安装目录下`创建 wordcount 的 输入文件 input
     $ vim ./input/test.c    # 创建 test.c 单词统计文件
 
     ```
@@ -145,6 +145,7 @@
     # jar 引入 hadoop 程序的依赖包
     # wordcount 为 hadoop 命令
     # input output 为命令的两个参数， input 文件夹为输入参数， output 文件夹为输出参数
+
     $ ./bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output
     $ cat ./output/*
     hello	1
@@ -157,3 +158,14 @@
 
 5. Hadoop 伪分布式安装
 
+    Hadoop 安装目录下面 conf 目录中配置文件说明
+
+    | file name                  | descriptions                                   |
+    | ---                        | ---                                            |
+    | hadoop-env.sh              | hadoop 运行环境配置文件                           |
+    | core-site.xml              | Hadoop core 配置项  HDFS MAPREDUCE 的 IO 设置等   |
+    | hdfs-site.xml              | Hadoop 守护进程配置项 包括 NameNode DataNode 等    |
+    | mapred-site.xml            | MapReduce 守护进程配置项 包括 JobTracker TakTracker|
+    | masters                    | 运行 SecondaryNameNmode 的机器列表                |
+    | slaves                     | 运行 DataNode 和 TaskTracker 的机器列表           |
+    | hadoop-metrics2.properties | 控制 metrics 在 Hadoop 上 如何发布的属性           |
