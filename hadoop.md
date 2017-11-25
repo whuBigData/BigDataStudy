@@ -1,7 +1,7 @@
 # hadoop 的安装与使用 (ubuntu)
 
-   本人原本 ubuntu 用户： **xj (xj@xj$)**</br>
-   切换到 hadoop 用户后： **hadoop(hadoop@xj$)**</br>
+   本人原本 ubuntu 用户(xj)： **xj@xj$**</br>
+   切换到 hadoop 用户(hadoop)： **hadoop@xj$**</br>
 
 
 1. 创建 hadoop 用户
