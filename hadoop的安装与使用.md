@@ -170,11 +170,11 @@
     | slaves                     | 运行 DataNode 和 TaskTracker 的机器列表           |
     | hadoop-metrics2.properties | 控制 metrics 在 Hadoop 上 如何发布的属性           |
 
-    
+
     对于伪分布式安装 我们需要修改 core-site.xml  hdfs-site.xml  mapred-site.xml 三个文件
-    
+
     ```sh
-    
+
     <property></property>: 配置的元素
     <name></name>: 配置项的名字
     <value></value>: 配置项的值
@@ -184,7 +184,7 @@
     修改后文件如下:
 
     core.site.xml(指定 hdfs 的地址和端口号)
-    
+
     ```sh
 
     <cofiguration>
@@ -211,9 +211,25 @@
 
     mapred-site.xml(设置 JobTracker 的地址和端口信息)
 
+    ```sh
+
     <configuration>
         <property>
             <name>mapred.job.tracker</name>
             <value>localhost:9001</name>
         </property>
     </configuration>
+
+    ```
+
+    配置已完成， 初始化 hadoop 文件系统
+
+    ```sh
+
+    $ ./bin/hadoop namenode -format  #  看到 successfully formatted 则成功
+    $ ./bin/start-all.sh
+
+    ```
+    配置好了 hadoop 伪分布文件系统了[http://localhost:50075](http://localhost:50075)
+
+    让我们再来在配置好的 hadoop 文件系统中重新完成 wordcount 例子（**这里是 hadoop 文件系统、 不是本地 linux 文件系统**）
