@@ -36,13 +36,13 @@
 
     ```sh
 
-    $ sudo -i -u hadoop                 # 切换到 hadoop 用户
-    $ ssh-keygen -t rsa -P ''           # 免密码生成公钥、私钥对  -p (--password)
-    $ cd ~/.ssh                         # 切换到公钥、私钥对目录
-    $ cat id_rsa.pub >> authorized_keys # 将本机 hadoop 用户的公钥保存到本机 hadoop 用户， 使得 ssh 连接本机能够成功
-    $ chmod 600 authorized_keys         # 设置 authorized_keys 文件权限为 可读可写
-    $ chmod 700 ~/.ssh                  # 设置 ~/.ssh 文件权限为 可读可写可执行
-    $ vim /etc/ssh/ssh_config           # 打开 /etc/ssh/ssh_config 文件
+    $ sudo -i -u hadoop                # 切换到 hadoop 用户
+    $ ssh-keygen -t rsa -P ''          # 免密码生成公钥、私钥对  -p (--password)
+    $ cd ~/.ssh                        # 切换到公钥、私钥对目录
+    $ cat id_rsa.pub >> authorized_keys# 将本机 hadoop 用户的公钥保存到本机 hadoop 用户， 使得 ssh 连接本机能够成功
+    $ chmod 600 authorized_keys        # 设置 authorized_keys 文件权限为 可读可写
+    $ chmod 700 ~/.ssh                 # 设置 ~/.ssh 文件权限为 可读可写可执行
+    $ vim /etc/ssh/ssh_config          # 打开 /etc/ssh/ssh_config 文件
 
     ```
 
@@ -82,7 +82,7 @@
 
     $ sudo mkdir /usr/local/hadoop                                  # 创建 hadoop 文件
     $ sudo tar -zxvf hadoop-1.2.1-bin.tar.gz -C /usr/local/hadoop   # 解压 hadoop 文件到 /usr/local/hadoop
-    $ sudo chown hadoop:hadoop /usr/local/hadoop    # 设置 /usr/local/hadoop 的拥有这为 hadoop 组 的 hadoop 用户
+    $ sudo chown hadoop:hadoop /usr/local/hadoop # 设置 /usr/local/hadoop 的拥有这为 hadoop 组 的 hadoop 用户
     $ cd /usr/local/hadoop/hadoop-1.2.1
 
     ```
