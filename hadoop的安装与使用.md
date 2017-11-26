@@ -148,6 +148,7 @@
 
     $ ./bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output
     $ cat ./output/*
+
     hello	1
     test	1
     word	2
@@ -252,6 +253,7 @@
     -rw-r--r--   3 hadoop supergroup         21 2017-11-25 20:35 /user/hadoop/input/test.c
     $ ./bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output # 单词统计
     $ ./bin/hadoop dfs -cat output/*        # 显示 hadoop 文件系统 output 文件夹里的信息
+    
     hello	1
     test	1
     word	2
