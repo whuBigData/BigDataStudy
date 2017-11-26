@@ -36,13 +36,13 @@
 
     ```sh
 
-    $ sudo -i -u hadoop                # 切换到 hadoop 用户
-    $ ssh-keygen -t rsa -P ''          # 免密码生成公钥、私钥对  -p (--password)
-    $ cd ~/.ssh                        # 切换到公钥、私钥对目录
-    $ cat id_rsa.pub >> authorized_keys# 将本机 hadoop 用户的公钥保存到本机 hadoop 用户， 使得 ssh 连接本机能够成功
-    $ chmod 600 authorized_keys        # 设置 authorized_keys 文件权限为 可读可写
-    $ chmod 700 ~/.ssh                 # 设置 ~/.ssh 文件权限为 可读可写可执行
-    $ vim /etc/ssh/ssh_config          # 打开 /etc/ssh/ssh_config 文件
+    $ sudo -i -u hadoop                 # 切换到 hadoop 用户
+    $ ssh-keygen -t rsa -P ''           # 免密码生成公钥、私钥对  -p (--password)
+    $ cd ~/.ssh                         # 切换到公钥、私钥对目录
+    $ cat id_rsa.pub >> authorized_keys # 将本机 hadoop 用户的公钥保存到本机 hadoop 用户，使得 ssh 连接本机能够成功
+    $ chmod 600 authorized_keys         # 设置 authorized_keys 文件权限为 可读可写
+    $ chmod 700 ~/.ssh                  # 设置 ~/.ssh 文件权限为 可读可写可执行
+    $ vim /etc/ssh/ssh_config           # 打开 /etc/ssh/ssh_config 文件
 
     ```
 
