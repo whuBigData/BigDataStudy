@@ -249,11 +249,14 @@
 
     $ ./bin/hadoop dfs -put ./input/* input
     $ ./bin/hadoop dfs -ls input            # 再显示 hahoop 用户文件目录下的input文件
+
     Found 1 items
     -rw-r--r--   3 hadoop supergroup         21 2017-11-25 20:35 /user/hadoop/input/test.c
+
+    
     $ ./bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output # 单词统计
     $ ./bin/hadoop dfs -cat output/*        # 显示 hadoop 文件系统 output 文件夹里的信息
-    
+
     hello	1
     test	1
     word	2
