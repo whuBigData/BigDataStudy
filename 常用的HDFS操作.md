@@ -100,4 +100,5 @@
 
     # copy a file or directory specified by <src> from hadoop file system to local file system
     hadoop fs -get [ignorecrc] [-crc] <src> <localdst>
+    
     ```
