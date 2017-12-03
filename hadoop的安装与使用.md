@@ -42,17 +42,24 @@
     $ cat id_rsa.pub >> authorized_keys # 将本机 hadoop 用户的公钥保存到本机 hadoop 用户，使得 ssh 连接本机能够成功
     $ chmod 600 authorized_keys         # 设置 authorized_keys 文件权限为 可读可写
     $ chmod 700 ~/.ssh                  # 设置 ~/.ssh 文件权限为 可读可写可执行
-    $ vim /etc/ssh/ssh_config           # 打开 /etc/ssh/ssh_config 文件
+    $ sudo apt-get install ssh          # install ssh server and client
+    $ sudo vim /etc/ssh/ssh_config      # 打开 /etc/ssh/ssh_config 文件
 
     ```
 
-    在 /etc/ssh/ssh_config 文件中 添加:
+    在 /etc/ssh/ssh_config 文件中(ssh client configuration) 添加:
 
     ```sh
 
     RSAAuthentication yes       # 允许使用 ssh 登录
     PubkeyAuthentication yes    # 允许使用公钥
-    PermitRootLogin yes         # 允许 root 登录
+
+    ```
+
+    在 /etc/ssh/sshd_config 文件中(ssh server configuration) 添加:
+
+    ```sh
+
     PasswordAuthentication no   # 不需要密码验证登录
 
     ```
