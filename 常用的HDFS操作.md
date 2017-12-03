@@ -12,29 +12,34 @@
 
     ```sh
 
-    # show info of files specified by path
+    # show info of file specified by <path>
     hadoop fs -ls <path>
 
-    # show info of all files and directores belonging to directory specified by path
+    # show info of directory specified by <path>
+    # recurse all son files and directories of the directory
     hadoop fs -lsr <path>
 
-    # create a directory specfied by path
+    # create a directory specfied by <path>
     hadoop fs -mkdir <path>
 
     # move file from some directory specified by <src> to directory specified by <dst>
     hadoop fs -mv <src> <dst>
+
+    # remove some file specified by <src>
     hadoop fs -rm <src>
+
+    # remode some directory specified by <src>
+    # recurse all son files and directories
     hadoop fs -rmr <src>
 
-    # output content of file specified by path to terminal
+    # output content of file specified by <path> to terminal
     hadoop fs -cat <path>
 
-    # -R specify all the son directories and files belongs to directory
-    # change the group directory/file specified by path belongs to
+    # change the group directory/file specified by <path> belongs to
+    # recurse all son files and directories of the directory
     hadoop fs -chgrp [-R] group <path>
 
-    # -R specify all the son directories and files belongs to directory
-    # change the owner directory/file
+    # change the owner of directory/file specified by <path> 
     hadoop fs -chown [-R] group <path>
 
     # 
