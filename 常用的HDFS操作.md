@@ -10,7 +10,7 @@
 
 2. common hdfs opration command
 
-    ```
+    ```sh
 
     # show info of files specified by path
     hadoop fs -ls <path>
@@ -25,3 +25,5 @@
     # -R specify all the son directories and files belongs to directory
     # change the owner directory/file
     hadoop fs -chown [-R] group <path>
+
+    ```
