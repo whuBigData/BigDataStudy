@@ -64,7 +64,7 @@
     hadoop fs -tail [-f] <path>
 
     # get info of file or directory specified by <path> satisfied [format]
-    # just show the create time of file or directory when command excludes [format] 
+    # just show the create time of file or directory when command excludes [format]
     hadoop fs -stat [format] <path>
 
     # create a empty directory
@@ -72,16 +72,19 @@
 
     # set the number of data's counterpart included in directory pecified by <path>
     # recurse all son files and directoriess
-    hadoop fs -setrep [-R] <path> 
+    hadoop fs -setrep [-R] <path>
 
     # test file's status
     # -e [--exist]  0: exists, 1: doesn't exist
     # -z [--zero]   0: file is 0 byte, 1: file is not 0 byte
-    # -d [--dir]    0: file is not a directory, 1: file is a directory 
+    # -d [--dir]    0: file is not a directory, 1: file is a directory
     hadoop fs -test -[ezd] <path>
 
     # output a zip or TxtRecordInputStream file to terminal
     hadoop fs -text <path>
+
+    # merge files in directory specified by <src> and copy to local file system
+    hadoop fs -getmerge <src> <localdst> [addnl]
 
     # copy a file or directory specified by <localsrc> from local file system to hadoop system
     hadoop fs -copyFormLocal <localsrc> <dst>
@@ -100,5 +103,5 @@
 
     # copy a file or directory specified by <src> from hadoop file system to local file system
     hadoop fs -get [ignorecrc] [-crc] <src> <localdst>
-    
+
     ```
