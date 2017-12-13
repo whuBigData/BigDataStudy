@@ -108,8 +108,9 @@
 
 
 
-### tail
-* 命令说明
+### tail command
+
+* command description
     
     ```sh
 
