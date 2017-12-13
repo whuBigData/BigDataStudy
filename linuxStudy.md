@@ -109,4 +109,25 @@
 
 
 ### tail
-tail [-f] [-c number] [-n number] file
+* 命令说明
+    
+    ```sh
+
+    # tail command:
+    # -c [--character] number      last number byte file
+    # -c [--character] +number     beginning number byte file
+    # -n [--lines] number          last number lines file
+    # -n [--lines] +number         beginning number lines file
+    # -f [--follow]                output changes of file monitered continuously
+    # -F [--Follow]                output changes of file monitored continuously
+    # -q [--quiet]                 output changes of file monitored but not file name
+    # -v [--verbose]               output changes of file monitored including file name
+    # -s [--sleep-interval] number output changes of file monitored interval number time
+    # -z [--zero-terminated]       output changes of file monitored to terminal but not new line 
+
+    tail [-c [+]number| -n [+]number] fileName
+    tail [-F| -f| -q| -v| -s| -z] fileName
+
+    ```
+
+ 
